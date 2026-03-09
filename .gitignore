@@ -1,0 +1,36 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+.fleet/
+.nova/
+.zed/
+*.sw?
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+
+# Backend
+backend/.env
+backend/.env.backup
+backend/.env.production
+backend/vendor/
+backend/node_modules/
+backend/public/build/
+backend/public/hot/
+backend/public/storage
+backend/storage/*.key
+backend/storage/pail/
+backend/.phpunit.result.cache
+backend/.phpunit.cache/
+backend/database/database.sqlite
+
+# Logs
+*.log
+npm-debug.log*

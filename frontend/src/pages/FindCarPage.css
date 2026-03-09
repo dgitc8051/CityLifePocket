@@ -1,0 +1,238 @@
+.find-page {
+    padding: var(--clp-space-lg) 0;
+}
+
+/* ─── Step Progress ─── */
+.step-progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--clp-space-xl);
+    position: relative;
+}
+
+.step-progress::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: var(--clp-border);
+}
+
+.step-dot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--clp-space-xs);
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    color: var(--clp-text-muted);
+    font-family: var(--clp-font-family);
+}
+
+.step-dot-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--clp-radius-full);
+    background: var(--clp-bg-secondary);
+    border: 2px solid var(--clp-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all var(--clp-transition-normal);
+}
+
+.step-dot.active .step-dot-icon {
+    border-color: var(--clp-primary);
+    background: var(--clp-primary);
+    color: white;
+    box-shadow: var(--clp-shadow-glow);
+}
+
+.step-dot.done .step-dot-icon {
+    border-color: var(--clp-success);
+    background: var(--clp-success);
+    color: white;
+}
+
+.step-dot-label {
+    font-size: var(--clp-font-size-xs);
+    font-weight: 500;
+    max-width: 60px;
+    text-align: center;
+}
+
+.step-dot.active .step-dot-label {
+    color: var(--clp-primary-light);
+}
+
+/* ─── Step Panel ─── */
+.step-panel {
+    padding: var(--clp-space-xl);
+    margin-bottom: var(--clp-space-lg);
+}
+
+.step-panel h2 {
+    font-size: var(--clp-font-size-xl);
+    margin-bottom: var(--clp-space-xs);
+}
+
+/* ─── Overview Info ─── */
+.overview-info {
+    margin-top: var(--clp-space-md);
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--clp-space-sm) 0;
+    border-bottom: 1px solid var(--clp-border-light);
+}
+
+.info-label {
+    color: var(--clp-text-secondary);
+    font-size: var(--clp-font-size-sm);
+}
+
+.info-value {
+    font-weight: 600;
+}
+
+.info-value.warn {
+    color: var(--clp-warning);
+}
+
+.overview-photo {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: var(--clp-radius-md);
+    margin-top: var(--clp-space-md);
+}
+
+/* ─── Nav Step ─── */
+.nav-step {
+    display: flex;
+    flex-direction: column;
+    gap: var(--clp-space-md);
+    margin-top: var(--clp-space-md);
+}
+
+.nav-hint {
+    font-size: var(--clp-font-size-sm);
+    padding: var(--clp-space-md);
+    border-radius: var(--clp-radius-sm);
+    background: rgba(0, 0, 0, 0.2);
+    line-height: 1.5;
+}
+
+/* ─── Floor Step ─── */
+.floor-step {
+    display: flex;
+    flex-direction: column;
+    gap: var(--clp-space-lg);
+    margin-top: var(--clp-space-md);
+}
+
+.floor-visual {
+    text-align: center;
+    padding: var(--clp-space-2xl);
+}
+
+.floor-big {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--clp-primary-light), var(--clp-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ─── Final Step ─── */
+.final-step {
+    display: flex;
+    flex-direction: column;
+    gap: var(--clp-space-md);
+    margin-top: var(--clp-space-md);
+}
+
+.find-photo {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: var(--clp-radius-md);
+}
+
+.zone-display {
+    text-align: center;
+    padding: var(--clp-space-lg);
+    background: rgba(108, 92, 231, 0.1);
+    border-radius: var(--clp-radius-md);
+    border: 1px solid rgba(108, 92, 231, 0.3);
+}
+
+.zone-label {
+    display: block;
+    font-size: var(--clp-font-size-sm);
+    color: var(--clp-text-secondary);
+    margin-bottom: var(--clp-space-xs);
+}
+
+.zone-value {
+    font-size: var(--clp-font-size-2xl);
+    font-weight: 800;
+    color: var(--clp-primary-light);
+}
+
+.note-display {
+    padding: var(--clp-space-md);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--clp-radius-sm);
+    font-size: var(--clp-font-size-sm);
+}
+
+/* ─── Quick Nav ─── */
+.quick-nav-btn {
+    width: 100%;
+}
+
+/* ─── Empty / Complete ─── */
+.empty-state,
+.complete-screen {
+    text-align: center;
+    padding: var(--clp-space-2xl) 0;
+}
+
+.empty-icon,
+.complete-icon {
+    font-size: 4rem;
+    margin-bottom: var(--clp-space-lg);
+}
+
+.complete-icon {
+    animation: bounceIn 0.5s ease;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.empty-state h2,
+.complete-screen h2 {
+    font-size: var(--clp-font-size-2xl);
+    margin-bottom: var(--clp-space-sm);
+}
