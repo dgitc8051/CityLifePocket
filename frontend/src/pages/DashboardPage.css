@@ -1,0 +1,134 @@
+.dashboard {
+  max-width: 960px;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.page-loading {
+  color: #8b8fa3;
+  padding: 2rem;
+}
+
+/* Stat cards */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #1a1a2e;
+  border-radius: 10px;
+  padding: 1.25rem;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #eaeaea;
+}
+
+.stat-label {
+  font-size: 0.8125rem;
+  color: #8b8fa3;
+  margin-top: 0.25rem;
+}
+
+/* Sections */
+.dashboard-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #8b8fa3;
+}
+
+/* Incident list */
+.incident-list {
+  background: #1a1a2e;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+.incident-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 150ms;
+  font-size: 0.875rem;
+}
+
+.incident-row:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.incident-row + .incident-row {
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.incident-row.urgent {
+  background: rgba(255,107,107,0.05);
+}
+
+.severity {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 22px;
+  border-radius: 4px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.severity-p0 { background: #ff6b6b; color: white; }
+.severity-p1 { background: #e17055; color: white; }
+.severity-p2 { background: #fdcb6e; color: #333; }
+.severity-p3 { background: #636e72; color: white; }
+
+.incident-number {
+  color: #8b8fa3;
+  font-size: 0.75rem;
+  width: 130px;
+  flex-shrink: 0;
+}
+
+.incident-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.incident-status {
+  font-size: 0.75rem;
+  color: #8b8fa3;
+  flex-shrink: 0;
+}
+
+.incident-time {
+  font-size: 0.75rem;
+  color: #5a5e72;
+  flex-shrink: 0;
+  width: 80px;
+  text-align: right;
+}
+
+.empty-text {
+  padding: 2rem;
+  text-align: center;
+  color: #5a5e72;
+}

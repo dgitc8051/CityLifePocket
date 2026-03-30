@@ -9,9 +9,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
       manifest: {
-        name: 'City Life Pocket',
-        short_name: 'CityLife',
-        description: '城市生活口袋助手 — 停車找車 & 垃圾清運查詢',
+        name: 'FixFlow',
+        short_name: 'FixFlow',
+        description: '統一事件管理平台 — 掃碼報修、自動派工、SLA 追蹤',
         theme_color: '#6C5CE7',
         background_color: '#0F0F1A',
         display: 'standalone',

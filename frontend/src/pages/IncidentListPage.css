@@ -1,0 +1,38 @@
+.incident-list-page {
+  max-width: 960px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.filters select {
+  padding: 0.5rem 0.75rem;
+  background: #1a1a2e;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  color: #eaeaea;
+  font-size: 0.8125rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.filters select:focus {
+  border-color: #6c5ce7;
+}
+
+.incident-assignee {
+  font-size: 0.75rem;
+  color: #8b8fa3;
+  width: 80px;
+  flex-shrink: 0;
+}

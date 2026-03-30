@@ -1,0 +1,120 @@
+.report-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: #f5f5f7;
+}
+
+.report-card {
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  color: #333;
+}
+
+.report-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1a1a2e;
+}
+
+.asset-info {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.asset-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.375rem 0;
+  font-size: 0.875rem;
+}
+
+.asset-info-row + .asset-info-row {
+  border-top: 1px solid #eee;
+}
+
+.asset-label {
+  color: #888;
+  font-weight: 500;
+}
+
+.report-card .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.report-card .form-group label {
+  display: block;
+  font-size: 0.8125rem;
+  color: #555;
+  margin-bottom: 0.375rem;
+  font-weight: 500;
+}
+
+.report-card .form-group input,
+.report-card .form-group textarea {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  outline: none;
+  font-family: inherit;
+  background: white;
+  color: #333;
+}
+
+.report-card .form-group input:focus,
+.report-card .form-group textarea:focus {
+  border-color: #6c5ce7;
+}
+
+.report-card .form-group textarea {
+  resize: vertical;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.875rem;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #5a4bd1;
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.report-success {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.report-success h1 {
+  color: #00b894;
+  margin-bottom: 0.5rem;
+}
+
+.report-number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #6c5ce7;
+  margin-bottom: 1rem;
+}

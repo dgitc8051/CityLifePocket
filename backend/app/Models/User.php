@@ -21,6 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'line_user_id',
+        'role',
+        'is_active',
     ];
 
     /**
@@ -43,6 +46,22 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'is_active' => 'boolean',
         ];
+    }
+
+    public function teams()
+    {
+        return $this->belongsToMany(Team::class);
+    }
+
+    public function oncallSchedules()
+    {
+        return $this->hasMany(OncallSchedule::class);
+    }
+
+    public function assignments()
+    {
+        return $this->hasMany(IncidentAssignment::class);
     }
 }
