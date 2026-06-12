@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.vue';
+@source '../**/*.js';
+
+@theme {
+    /* Refined neutrals — warm off-white (washi 風味) */
+    --color-ink-50: #fafaf8;
+    --color-ink-100: #f4f3f0;
+    --color-ink-200: #e9e8e4;
+    --color-ink-300: #d6d4cf;
+    --color-ink-400: #a8a6a0;
+    --color-ink-500: #7c7a74;
+    --color-ink-600: #55534e;
+    --color-ink-700: #3c3a36;
+    --color-ink-800: #25241f;
+    --color-ink-900: #14130f;
+
+    /* Sumi 墨色 — primary action / focus */
+    --color-sumi-50: #f3f3f1;
+    --color-sumi-100: #d8d8d4;
+    --color-sumi-500: #2c2c28;
+    --color-sumi-600: #1a1a17;
+    --color-sumi-900: #0a0a08;
+
+    /* 群青 (gunjō) — subtle accent, used sparingly */
+    --color-accent-50: #eef2f7;
+    --color-accent-100: #d6dfeb;
+    --color-accent-500: #4a6789;
+    --color-accent-600: #3a5470;
+    --color-accent-700: #2c4258;
+
+    /* Semantic — muted */
+    --color-success-50: #eef5ef;
+    --color-success-700: #3c6b48;
+    --color-warning-50: #fbf3e8;
+    --color-warning-700: #876332;
+    --color-danger-50: #f8ecec;
+    --color-danger-700: #8a3838;
+
+    --font-sans: 'Inter', 'Noto Sans TC', 'Noto Sans JP', ui-sans-serif,
+        system-ui, sans-serif;
+    --font-serif: 'Noto Serif TC', 'Noto Serif JP', ui-serif, Georgia, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-feature-settings: 'cv11', 'ss01', 'ss03', 'palt' 1;
+}
+
+body {
+    background-color: var(--color-ink-50);
+    color: var(--color-ink-800);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0.005em;
+    line-height: 1.55;
+}
+
+#app {
+    min-height: 100%;
+}
+
+/* Refined scrollbar */
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+    background: var(--color-ink-200);
+    border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--color-ink-300);
+}
+
+/* Hairline divider helper */
+.hairline {
+    background-color: var(--color-ink-200);
+    height: 1px;
+}
+
+/* Refined number rendering */
+.num {
+    font-feature-settings: 'tnum' 1, 'lnum' 1;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Subtle press state for buttons */
+button:not(:disabled):active {
+    transform: translateY(0.5px);
+}
+
+/* Focus ring — refined */
+:focus-visible {
+    outline: 2px solid var(--color-accent-500);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
